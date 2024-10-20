@@ -47,6 +47,11 @@ app.post('/api/products', async (req, res) => {
     }
 });
 
+// Route pour vérifier que le back-end fonctionne
+app.get('', (req, res) => {
+    res.status(200).send('Back is working');
+});
+
 // Démarrer le serveur
 app.listen(PORT, () => {
     console.log(`Serveur en cours d'exécution sur http://localhost:${PORT}`);
